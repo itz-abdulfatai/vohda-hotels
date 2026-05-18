@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f3f3f4",
+                    "on-primary-container": "#8f8e8d",
+                    "secondary-fixed-dim": "#e0c480",
+                    "tertiary-fixed-dim": "#cbc6bb",
+                    "surface-tint": "#5f5e5e",
+                    "tertiary-container": "#292720",
+                    "on-surface-variant": "#444748",
+                    "surface-dim": "#dadada",
+                    "tertiary-fixed": "#e7e2d6",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "outline": "#747878",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-tertiary-container": "#918e84",
+                    "on-tertiary-fixed": "#1d1c15",
+                    "primary-container": "#272727",
+                    "on-secondary-fixed-variant": "#57440d",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c4c7c7",
+                    "on-secondary-container": "#766027",
+                    "surface-container-highest": "#e2e2e2",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#fbdd97",
+                    "on-tertiary-fixed-variant": "#49473e",
+                    "surface-container": "#eeeeee",
+                    "primary": "#121213",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-fixed": "#1b1c1c",
+                    "on-background": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#e4e2e1",
+                    "on-error": "#ffffff",
+                    "secondary": "#715c23",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "tertiary": "#14130c",
+                    "on-secondary-fixed": "#251a00",
+                    "on-surface": "#1a1c1c",
+                    "secondary-fixed": "#fedf9a",
+                    "inverse-primary": "#c8c6c5",
+                    "background": "#f9f9f9",
+                    "surface-variant": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "margin": "48px",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Noto Serif"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Noto Serif"],
+                    "label-lg": ["Inter"],
+                    "headline-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #B59B5C !important;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin py-stack-md">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-primary">Vohda Hotels</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#">Offers</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors">Sign In</button>
+<button class="bg-secondary text-white px-6 py-2 rounded-none font-label-lg text-label-lg hover:bg-secondary/90 transition-all duration-300">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin mb-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-end">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] text-secondary mb-4 block">Get in Touch</span>
+<h1 class="font-headline-xl text-headline-xl mb-6">Concierge &amp; Inquiries</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Whether you require assistance with a future reservation or seek personalized recommendations for your stay, our dedicated team is at your service 24/7.
+                    </p>
+</div>
+<div class="hidden lg:block">
+<div class="h-px bg-outline-variant w-full mb-4"></div>
+</div>
+</div>
+</section>
+<!-- Contact & Form Grid -->
+<section class="max-w-container-max mx-auto px-margin mb-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Contact Details -->
+<div class="lg:col-span-4 space-y-12">
+<div>
+<h3 class="font-headline-md text-headline-md mb-6">Our Residence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            72 Rue du Faubourg Saint-Honoré,<br/>
+                            75008 Paris, France
+                        </p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">Reservations</p>
+<p class="font-body-md text-body-md">+33 (0) 1 53 43 43 00</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">Email Inquiry</p>
+<p class="font-body-md text-body-md">concierge@vohdahotels.com</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary" data-icon="chat">chat</span>
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">WhatsApp</p>
+<p class="font-body-md text-body-md">+33 7 45 12 98 00</p>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-4">Follow Our Journey</p>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="brand_awareness">brand_awareness</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-10 lg:p-16 luxury-shadow">
+<h3 class="font-headline-md text-headline-md mb-8">Send a Message</h3>
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2 block">First Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 transition-all font-body-md" placeholder="e.g. Julian" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2 block">Last Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 transition-all font-body-md" placeholder="e.g. Sterling" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2 block">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 transition-all font-body-md" placeholder="julian@example.com" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2 block">Subject</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 transition-all font-body-md appearance-none">
+<option>General Inquiry</option>
+<option>Reservation Support</option>
+<option>Events &amp; Weddings</option>
+<option>Press Relations</option>
+</select>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2 block">Your Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 transition-all font-body-md resize-none" placeholder="How may we assist you today?" rows="4"></textarea>
+</div>
+<div class="flex justify-end">
+<button class="bg-primary text-on-primary px-12 py-4 font-label-lg text-label-lg hover:bg-secondary transition-all duration-500 uppercase tracking-[0.1em]" type="submit">
+                                Send Message
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Elegant Map Section -->
+<section class="w-full h-[600px] relative grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 z-10 pointer-events-none"></div>
+<div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+<div class="bg-surface/90 backdrop-blur-sm p-6 luxury-shadow text-center">
+<p class="font-headline-md text-headline-md mb-2">Find Your Way</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Paris, France</p>
+</div>
+</div>
+<img class="w-full h-full object-cover" data-alt="A high-angle, cinematic aerial view of the streets of Paris at dusk, featuring the elegant architecture of the 8th Arrondissement. The image has a sophisticated, dark-themed aesthetic with cool-toned shadows and warm amber streetlights flickering on. The overall mood is peaceful and luxurious, emphasizing the historical beauty and structured urban layout of a high-end European neighborhood." data-location="Paris, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIRcYtRlJkrN5v1BJp2ZEOdQakgce2Kln51-sCBAYpUahRYZhkkGr6IQNAsfERRr8WHOVyDzo9cDA2Wv-1eZcZEE1PVEJL0yjbAWwKXFjIlitj8_-TGhuKbHZCd69Fgn7LVknps4vY4QhYBwWQeCOApTTsyhO_2WQGRH2Ak4Leu_7ly87EGVja3DGpM82JGry-JjB-U4QXH9Js1rrSRH_kwf6YfiFi41nMOTpNiBP3QXEhIWo25ri9C5m_KsDfMN7LZb1knTjclvVd"/>
+</section>
+<!-- Newsletter / Contact Footer CTA -->
+<section class="max-w-container-max mx-auto px-margin py-section-padding border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<div class="mb-8 md:mb-0">
+<h2 class="font-headline-md text-headline-md mb-2">Stay Connected</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Receive exclusive offers and seasonal updates from our global retreats.</p>
+</div>
+<div class="flex w-full md:w-auto">
+<input class="bg-surface-container-low border-0 px-6 py-4 w-full md:w-80 font-body-md focus:ring-0" placeholder="Your email address" type="email"/>
+<button class="bg-secondary text-white px-8 py-4 font-label-lg text-label-lg uppercase tracking-wider">Join</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin py-section-padding">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-primary">Vohda Hotels</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    A collection of sanctuary-inspired retreats for the discerning traveler.
+                </p>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">Destinations</h4>
+<ul class="space-y-4 font-label-md text-label-md text-on-surface-variant">
+<li class="hover:text-secondary cursor-pointer transition-colors">Paris Residence</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Kyoto Sanctuary</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Maldives Retreat</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Swiss Alps Lodge</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">Links</h4>
+<ul class="space-y-4 font-label-md text-label-md text-on-surface-variant">
+<li class="hover:text-secondary cursor-pointer transition-colors">Sustainability</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Careers</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Press Room</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Awards</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4 font-label-md text-label-md text-on-surface-variant">
+<li class="hover:text-secondary cursor-pointer transition-colors">Privacy Policy</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Terms of Service</li>
+<li class="hover:text-secondary cursor-pointer transition-colors">Cookie Policy</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin py-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<p class="font-label-md text-label-md text-on-primary-container">© 2024 Vohda Hotels &amp; Resorts. All rights reserved.</p>
+<div class="flex space-x-8">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary" data-icon="language">language</span>
+<span class="font-label-md text-label-md text-on-surface-variant">English (International)</span>
+</div>
+</div>
+</footer>
+</body></html>

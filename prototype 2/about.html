@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Vohda Hotels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e7e2d6",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e4e2e1",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed": "#1b1c1c",
+                        "tertiary-container": "#292720",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#fedf9a",
+                        "tertiary": "#14130c",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#272727",
+                        "secondary-fixed-dim": "#e0c480",
+                        "on-secondary-container": "#766027",
+                        "surface-tint": "#5f5e5e",
+                        "on-secondary-fixed-variant": "#57440d",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fbdd97",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#8f8e8d",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary": "#715c23",
+                        "primary": "#121213",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed": "#1d1c15",
+                        "on-tertiary-container": "#918e84",
+                        "outline-variant": "#c4c7c7",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding": "120px",
+                        "card-gap": "24px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display": ["Noto Serif"],
+                        "button": ["Inter"],
+                        "h1": ["Noto Serif"],
+                        "h3": ["Noto Serif"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h2": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed w-full top-0 z-50 bg-white/10 backdrop-blur-md">
+<div class="flex justify-between items-center px-16 h-24 max-w-container-max mx-auto">
+<div class="flex gap-8 items-center">
+<a class="font-display text-h3 text-primary uppercase tracking-tighter hover:scale-95 duration-200 ease-in-out" href="#">Vohda</a>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-display text-body-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-display text-body-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Offers</a>
+<a class="font-display text-body-lg uppercase tracking-widest text-primary border-b border-primary pb-1 hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-display text-body-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex gap-6 items-center">
+<button class="font-button text-button text-primary hover:text-secondary transition-colors duration-300 hidden md:block">Account</button>
+<button class="font-button text-button bg-primary text-on-primary px-6 py-3 rounded hover:bg-tertiary transition-colors duration-300">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[819px] min-h-[600px] flex items-center justify-center overflow-hidden">
+<img alt="Vohda Hotels Heritage" class="absolute inset-0 w-full h-full object-cover" data-alt="A sweeping, cinematic view of a majestic historic hotel exterior at twilight. The architecture features grand, classic European elements mixed with modern glass accents. Warm golden lighting spills from the windows onto the meticulously manicured grounds, contrasting beautifully with the deep blue evening sky. The scene is shot from a slightly low angle to emphasize grandeur, using a high-end architectural photography style. The overall mood is luxurious, timeless, and exceptionally welcoming, perfectly aligning with a high-end hospitality aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOFa5iw5T6UE009C_rgmStBZRdYYLll2QBOhIS4FonMONIRWxl8mByG482ktYugb63w2DGR9DKN7X6ZQHLgpOnGxqpK4Ew9t2oBd5fP5FXYQpR9-A48wDAkvbs0Ho1X1FMnG2OlYQntnz46te1t_q__M_BiGSt2b0njsDW3vyLrx79CjQfEkHLiYCYSzI2q5rLyN027WLf0nBN6ZTlgUBihYSUWdwYxhlWHFKjpFmBAmsRBok77LIULwPEAKj0zTgMh4e6jAh8e6w"/>
+<div class="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<h1 class="font-display text-display text-on-primary mb-6">A Legacy of Quiet Luxury</h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl mx-auto">
+                    Since our inception, Vohda has redefined the art of hospitality. We believe in crafting experiences that resonate with elegance, comfort, and an unwavering commitment to unparalleled service.
+                </p>
+</div>
+</section>
+<!-- The Vohda Story -->
+<section class="py-section-padding px-6 md:px-16 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-h1 text-h1 text-primary mb-6">The Vohda Story</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Born from a desire to offer more than just a place to stay, Vohda Hotels began as a vision of sanctuary in the bustling heart of the world's most captivating cities. We recognized a need for spaces that whisper luxury rather than shout it.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our heritage is built on the meticulous curation of every detail. From the thread count of our linens to the bespoke artwork gracing our halls, every element is chosen to foster an environment of serene indulgence. We invite you to become part of our continuing story.
+                    </p>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0 relative">
+<div class="absolute -inset-4 bg-surface-container-low -z-10 rounded-lg transform rotate-2"></div>
+<img alt="Hotel Lobby Details" class="w-full h-[500px] object-cover shadow-[0_30px_50px_rgba(18,18,19,0.05)]" data-alt="Close-up detail shot of a sophisticated hotel lobby interior. Focus on a bespoke, sculptural brass reception desk alongside richly textured velvet seating in deep charcoal. The lighting is ambient and low-contrast, highlighting the exquisite materials and craftsmanship. In the blurred background, soft natural light filters through large architectural windows, creating a serene, quiet luxury atmosphere. The composition is asymmetrical, emphasizing a modern editorial design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHmeEr51cVq4CsYV9lbvydeuqdHArdx1VXBbV_yijJStMWmLU--ov_cLokINU8garSR_Pyb9B3U7WnOSNb9BBLqqL4pcqQRQgZhFtqHOxUZvJKhRTGutDP0qjBs1SZKNWnNVg33EKfjXN-KYKjXqS6VUAYEbguC-NOHMVNswlR5ebWux-BKHqJm_a5hHZTeS4IigVRKKkyibF2QmPFM6CxI7osFAk3ksptg3rHD5xDUJa-Mzv_LsMZ73ucE5goFI31nhBQFZYfiv0"/>
+</div>
+</div>
+</section>
+<!-- Our Philosophy - Bento Grid -->
+<section class="py-section-padding px-6 md:px-16 bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="font-h1 text-h1 text-primary mb-4">Our Philosophy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We believe true luxury is found in the absence of friction. It's an intuitive service that anticipates your needs before you voice them.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-card-gap">
+<!-- Bento Item 1 -->
+<div class="bg-surface p-10 shadow-[0_40px_50px_rgba(18,18,19,0.03)] hover:-translate-y-2 transition-transform duration-500 flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" style="font-variation-settings: 'FILL' 0;">diamond</span>
+<h3 class="font-h3 text-h3 text-primary mb-4">Curated Comfort</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Every room is a sanctuary, designed with expansive layouts and bespoke furnishings that encourage ultimate relaxation.</p>
+</div>
+</div>
+<!-- Bento Item 2 (Image) -->
+<div class="md:col-span-2 h-80 overflow-hidden shadow-[0_40px_50px_rgba(18,18,19,0.03)] group">
+<img alt="Luxury Room Interior" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A wide angle shot of a minimalist, luxury hotel suite bedroom bathed in soft morning light. The room features a plush king-sized bed with crisp white linens, a neutral color palette of soft creams and muted taupes, and expansive floor-to-ceiling windows offering a tranquil view. A sleek, modern lounge chair sits elegantly in the corner. The aesthetic is clean, airy, and deeply calming, representing high-end residential comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTfWlaWV5Inn03Mipb2g1rx26ebdLmXtNh4WEIAhMMeYoACkOzMBX_pp7eybUapC-aVnlYIi0lIn1Ot-4TnLQWyZyzQBSOUNBP_80k7BxItEftK_FJLrU-6OHA91kLqTweHwTqU-g4U-NAzJRAO8ihc82fO4iazv-mXKBRLOLUZoz3e51xkYAY-eQEtsAO44YJz9RivSo9dpzQZhqzRrTCoPzy2-PvRnU279zaPfymIUascIzTWJ2LlwhPoV59E8MUcop-LdzZ-r4"/>
+</div>
+<!-- Bento Item 3 (Image) -->
+<div class="h-80 overflow-hidden shadow-[0_40px_50px_rgba(18,18,19,0.03)] group">
+<img alt="Personalized Service" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A lifestyle shot focusing on impeccable hotel service. A smartly dressed concierge hands a silver key card to an unseen guest across a polished marble counter. The focus is sharp on the hands and the elegant key, with the background softly blurred to emphasize discretion and personalized attention. The lighting is warm and inviting, conveying trust, professionalism, and high-tier hospitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcaVEB4rEm80Sa-chKBa5wlT7EcwufoYzsJ9liWMklZ_Y0ppNCIZi61jvTNpVmKP9nlku1vTcAtxuP0tXEaleJcmQQNdZoFd2YNEJBeMeApHjkAfDIOfwy4DeFW2bZqIHWwcYEJfIGtUd81ahXBRHptsgAtUIke_-YwJU_dlKRFP27-X73dGhjqVN1HonQHopKtAEsKJsR9NsCYRdG10OtprLfSzN7o2C2ZdRV9ZROygaYQxRKRqcjd69i2v7Nx3re2SO9AOzEDN0"/>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-2 bg-surface p-10 shadow-[0_40px_50px_rgba(18,18,19,0.03)] hover:-translate-y-2 transition-transform duration-500 flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block" style="font-variation-settings: 'FILL' 0;">diversity_1</span>
+<h3 class="font-h3 text-h3 text-primary mb-4">Intuitive Service</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">We pride ourselves on staff who read the room, providing attention when desired and absolute privacy when required. Our service is a silent partner in your perfect stay.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Unparalleled Amenities -->
+<section class="py-section-padding px-6 md:px-16 max-w-container-max mx-auto">
+<h2 class="font-h1 text-h1 text-primary text-center mb-16">Unparalleled Amenities</h2>
+<div class="space-y-32">
+<!-- Dining -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6">
+<img alt="Fine Dining" class="w-full h-[600px] object-cover shadow-[0_40px_50px_rgba(18,18,19,0.04)]" data-alt="A moody, atmospheric shot of an exclusive hotel fine dining restaurant. The scene features a beautifully set table with sparkling crystal glassware, fine china, and a subtly lit centerpiece. In the background, elegant architectural details and plush seating are visible under warm, intimate lighting. The color palette leans towards deep charcoals and warm golds, creating a sophisticated and romantic culinary environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtYpykZHTFT1DN-VS1_lebC2iXL-kvhzY6bDIa3bs9s55DUM_LprJvxhVf6zD4nj2hbxz9r-g-Rb2fhTRy9GmPNkTtpOxKUnZ59_4NRz5Rxs1f9bNHmAs2_GIl3nksNF4PF11KYRhYhJGcPBYO8xdt0Cox2YqAbow2qWbSdAIhm9KYuPI2sDTA8ySnV-9zUd5RNVnkvlIjN4hxG2WnQpEu-n7Ag7BXADKhYXDyfhy9Mzx58CgzlDXcBXQvZD4yT6fnyVj11CNZDec"/>
+</div>
+<div class="md:col-span-5 md:col-start-8">
+<h3 class="font-h2 text-h2 text-primary mb-4">Epicurean Dining</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Experience culinary artistry guided by globally renowned chefs. Our dining spaces are designed to be destinations in themselves, offering locally sourced ingredients presented with modern flair.
+                        </p>
+<a class="font-button text-button text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors uppercase tracking-widest" href="#">Explore Dining</a>
+</div>
+</div>
+<!-- Spa -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h3 class="font-h2 text-h2 text-primary mb-4">Holistic Wellness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Retreat to our subterranean spas, where ancient healing traditions meet contemporary wellness practices. A sanctuary of calm designed to rejuvenate mind, body, and spirit.
+                        </p>
+<a class="font-button text-button text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors uppercase tracking-widest" href="#">View Spa Menu</a>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2">
+<img alt="Luxury Spa" class="w-full h-[600px] object-cover shadow-[0_40px_50px_rgba(18,18,19,0.04)]" data-alt="A serene, minimalist hotel spa interior. The image showcases a tranquil treatment room featuring natural stone textures, warm wood accents, and soft, diffused lighting. A massage table is perfectly made with crisp white linens. Subtle details like fresh orchids and a glowing ambient candle add to the atmosphere of profound relaxation and high-end holistic wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYvqzh1aO6qsqPKLJcJpepjos57gewXYm_wL7bLTkUh1w7cjziwFnuTaX5y1ex_2Q-rSlq3ElaKePesrF2DnQw9eeYVfz3pIpd_JHcBtRN1vW3D0HN3TX2w0Wl9rqg_N0mzEAKaZZsqKxW23PnFA7l7I-_k0fjTZQVx7pEdf7SymRHzHZrNEPz-2g4anbf7p4biKG37qDrkhVAMtRETN3vHojN-jeTj_rSN2KgZ1h99pgGh6gn9mtkA_yat03UXs6AjZkBU_mQjHc"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface">
+<div class="grid grid-cols-12 gap-gutter px-16 max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<div class="font-display text-h2 text-primary mb-4">Vohda</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    Defining quiet luxury in the world's most remarkable destinations.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-8 justify-end">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a>
+</div>
+<div class="col-span-12 mt-16 pt-8 border-t border-surface-variant flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">© 2024 Vohda Hotels. All rights reserved.</span>
+</div>
+</div>
+</footer>
+</body></html>

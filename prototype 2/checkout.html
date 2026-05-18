@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Checkout - Vohda Hotels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e7e2d6",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e4e2e1",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed": "#1b1c1c",
+                        "tertiary-container": "#292720",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#fedf9a",
+                        "tertiary": "#14130c",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#272727",
+                        "secondary-fixed-dim": "#e0c480",
+                        "on-secondary-container": "#766027",
+                        "surface-tint": "#5f5e5e",
+                        "on-secondary-fixed-variant": "#57440d",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fbdd97",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#8f8e8d",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary": "#715c23",
+                        "primary": "#121213",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed": "#1d1c15",
+                        "on-tertiary-container": "#918e84",
+                        "outline-variant": "#c4c7c7",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding": "120px",
+                        "card-gap": "24px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display": ["Noto Serif"],
+                        "button": ["Inter"],
+                        "h1": ["Noto Serif"],
+                        "h3": ["Noto Serif"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md fixed w-full top-0 z-50">
+<div class="flex justify-between items-center px-16 h-24 max-w-container-max mx-auto">
+<div class="font-display text-h3 text-primary uppercase tracking-tighter">Vohda</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Offers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Account</a>
+<button class="bg-primary text-on-primary font-button text-button px-6 py-3 rounded-DEFAULT hover:opacity-90 transition-opacity">Book Now</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-32 pb-section-padding">
+<div class="max-w-container-max mx-auto px-16">
+<!-- Progress Indicator -->
+<div class="flex items-center justify-center mb-16 gap-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs">1</span>
+<span class="font-label-caps text-label-caps text-primary">Details</span>
+</div>
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full border border-primary text-primary flex items-center justify-center text-xs">2</span>
+<span class="font-label-caps text-label-caps text-primary font-bold">Payment</span>
+</div>
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full border border-outline-variant text-outline-variant flex items-center justify-center text-xs">3</span>
+<span class="font-label-caps text-label-caps text-outline-variant">Confirmation</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Forms -->
+<div class="md:col-span-7 space-y-16">
+<!-- Details Section -->
+<section>
+<h2 class="font-h2 text-h2 mb-8">Your Details</h2>
+<div class="bg-surface-container-lowest p-8 rounded-DEFAULT shadow-[0_30px_50px_rgba(18,18,19,0.03)] border border-surface-container-low">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="firstName">First Name</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="firstName" placeholder="Enter first name" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="lastName">Last Name</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="lastName" placeholder="Enter last name" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="email">Email Address</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="email" placeholder="Enter email address" type="email"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="phone">Phone Number</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="phone" placeholder="Enter phone number" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="requests">Special Requests</label>
+<textarea class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md resize-none" id="requests" placeholder="Any special requests or arrival time?" rows="3"></textarea>
+</div>
+</form>
+</div>
+</section>
+<!-- Payment Section -->
+<section>
+<h2 class="font-h2 text-h2 mb-8">Payment</h2>
+<div class="bg-surface-container-lowest p-8 rounded-DEFAULT shadow-[0_30px_50px_rgba(18,18,19,0.03)] border border-surface-container-low">
+<div class="flex justify-between items-center mb-8">
+<span class="font-body-md text-on-surface-variant">Secure Credit Card Payment</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+</div>
+<form class="space-y-6">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="cardName">Name on Card</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="cardName" placeholder="Name exactly as it appears on card" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="cardNumber">Card Number</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="cardNumber" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="expiry">Expiry Date</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="expiry" placeholder="MM/YY" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="cvv">CVV</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-3 focus:ring-0 focus:border-secondary transition-colors text-body-md" id="cvv" placeholder="123" type="text"/>
+</div>
+</div>
+</form>
+<div class="mt-8 pt-8 border-t border-surface-container">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-sm">add</span> Add Promo Code
+                                </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="md:col-span-5">
+<div class="sticky top-32">
+<div class="bg-tertiary-fixed p-8 rounded-DEFAULT">
+<h3 class="font-h3 text-h3 mb-6">Order Summary</h3>
+<div class="aspect-[4/3] rounded-sm overflow-hidden mb-6">
+<img alt="Hotel Room" class="w-full h-full object-cover" data-alt="A luxurious hotel suite with a large king-sized bed, crisp white linens, and modern minimalist decor. Sunlight streams through expansive floor-to-ceiling windows, casting soft shadows across the wooden floor. The color palette is composed of warm creams, soft whites, and natural wood tones, reflecting a serene and exclusive atmosphere. High-end architectural design elements and a sense of quiet luxury are evident throughout the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL1VXRPNWnSLFLwTSFL6fQYyOTqhZ-gui5aD7vZ06F_KeGYYZgNFbwT8KV2hlI-6qAEox6pvMFtbM_jP0GeN09dinRcKQy5XyYR6CVIUBEEPVC9ZBuEZAjbSZrZDZ4rdoaEkVoLHUoonRs1FDIGAj8KpgZhaxrXSdQdVc9e6VrVvySp-xnuqynBcE1svMoKsWPI6t-cSRVbEYFxM3mduVyOxMOAfbeCI5rgR_N-DnKARgrK5dRAKa72_l6Bu4RMNETaleQYX3TRIA"/>
+</div>
+<div class="mb-6">
+<h4 class="font-h3 text-xl mb-1">Ocean View Suite</h4>
+<p class="text-on-tertiary-fixed-variant text-sm">2 Guests • 1 King Bed</p>
+</div>
+<div class="flex justify-between mb-6 pb-6 border-b border-tertiary-fixed-dim">
+<div>
+<p class="font-label-caps text-label-caps text-on-tertiary-fixed-variant mb-1">Check-in</p>
+<p class="font-body-md">Oct 15, 2024</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-on-tertiary-fixed-variant mb-1">Check-out</p>
+<p class="font-body-md">Oct 18, 2024</p>
+</div>
+</div>
+<div class="space-y-4 mb-6 pb-6 border-b border-tertiary-fixed-dim">
+<div class="flex justify-between">
+<span class="text-on-tertiary-fixed-variant">$450 x 3 nights</span>
+<span>$1,350.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-tertiary-fixed-variant">Taxes &amp; Fees</span>
+<span>$162.00</span>
+</div>
+</div>
+<div class="flex justify-between items-center mb-8">
+<span class="font-h3 text-h3">Total</span>
+<span class="font-h3 text-h3">$1,512.00</span>
+</div>
+<button class="w-full bg-primary text-on-primary font-button text-button py-4 rounded-DEFAULT hover:opacity-90 transition-opacity mb-4">Complete Reservation</button>
+<div class="flex items-center justify-center gap-2 text-on-tertiary-fixed-variant text-sm">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>No hidden fees. Secure transaction.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface">
+<div class="grid grid-cols-12 gap-gutter px-16 max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 flex flex-col justify-between">
+<div class="font-display text-h2 text-primary mb-8">Vohda</div>
+<p class="text-on-surface-variant font-body-md text-sm">© 2024 Vohda Hotels. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex justify-end gap-12">
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

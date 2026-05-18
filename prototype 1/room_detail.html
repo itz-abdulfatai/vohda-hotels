@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deluxe King Suite | Vohda Hotels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f3f4",
+                        "on-primary-container": "#8f8e8d",
+                        "secondary-fixed-dim": "#e0c480",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary-container": "#292720",
+                        "on-surface-variant": "#444748",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed": "#e7e2d6",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "outline": "#747878",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#918e84",
+                        "on-tertiary-fixed": "#1d1c15",
+                        "primary-container": "#272727",
+                        "on-secondary-fixed-variant": "#57440d",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary-container": "#766027",
+                        "surface-container-highest": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fbdd97",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "surface-container": "#eeeeee",
+                        "primary": "#121213",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e4e2e1",
+                        "on-error": "#ffffff",
+                        "secondary": "#715c23",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary": "#14130c",
+                        "on-secondary-fixed": "#251a00",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed": "#fedf9a",
+                        "inverse-primary": "#c8c6c5",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "margin": "48px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "label-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin py-stack-md">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-primary">Vohda Hotels</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1 transition-colors duration-300" href="#">Rooms</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#">Offers</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300">Sign In</button>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 font-label-lg text-label-lg transition-all duration-300 hover:opacity-90">Book Now</button>
+</div>
+</nav>
+</header>
+<main class="pt-[100px]">
+<!-- Image Gallery Bento -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-sm h-[600px]">
+<div class="md:col-span-8 h-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A grand, spacious Deluxe King Suite with a king-sized bed featuring premium white linens and a gold throw. Large floor-to-ceiling windows reveal a serene garden view during golden hour. The interior design is modern minimalist with warm taupe accents, soft architectural lighting, and a sophisticated atmosphere of quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMiZPzJfVOIMZo-WoSCVww12TbEXKAicV-_KomIs7qdW8I-Kvhbef35VIZvetvnvuVfC5hcZHEHklh1JstzPYKkVcGcaETHFUz54B62LXR1UHMGpWXFkKP2_Comyj0uYdsrKVF4lmiv9KYR4lW_EoiC53PIN4cWcdt0jL5K5lOFjWCd72FA-H7fjRdkrsBOYNBnQ10toArpGEOfW6GL8srIlYzb7-Dg6qsIQ_91-R6GQg5G7P-EDpFB9dF749djmI8NykUz736EsS7"/>
+</div>
+<div class="md:col-span-4 flex flex-col gap-stack-sm h-full">
+<div class="h-1/2 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Detail of a luxury hotel bathroom featuring a deep soaking marble tub and high-end brass fixtures. Soft ambient lighting creates a relaxing spa-like environment. The palette is dominated by elegant whites and subtle taupe textures, consistent with a high-end hospitality aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGWvtBE4pAnfhXPCuHs-fKXmdRF6tmGdV6VjktkSYL2lTr-m5P64msNrcpYpMUtEtIJRqSTk86RENaWV5DLGGJaRgE68--FjQfYdt_VCuHJTmWg4GI-NzYfUtcr_mPqoiCyf3zj1kaTaIbHupmgRYTI2uNvSaB3F443UAk-er_tcgrszyZ8t3GucL63MnA1oNulGWSVbETtw7_TvQSnmsI_l1vf8YP5Q0-u4gQghZB9o3lluKjyiAg9W4_YHENgll4mAJOKR7wDXN7"/>
+</div>
+<div class="h-1/2 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A curated seating area within a luxury hotel suite, featuring a minimalist armchair in champagne fabric and a small marble side table. A soft architectural shadow falls across the textured wall. The mood is tranquil and sophisticated, reflecting a quiet luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDWfFRNmB8idRhmyqGUYCAsII9ilR3kGBhAk48CUznWvpgELg9IoVyVvTmBTgVfMicquKiXsZCsDuFs6uGR362eeFcmFPm3HSposflHDE58nifUhBejox6Wvvb03pU_uRv7pv31pFzjGnaJ0OcnlB_h1mpVkfh7-G5TgTni8KRq6vqNw_Wr3DMpXjZlZGA_DBsJ53TU1pjX0rGZvKE5rb2EdPqtUkOtSMrIp-pB2QdNz-Ja32QLLdB1nHpA1T872-TXoM1JCZ71MHn"/>
+<button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-md px-4 py-2 font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="grid_view">grid_view</span>
+                            VIEW ALL PHOTOS
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Content & Booking Grid -->
+<section class="max-w-container-max mx-auto px-margin py-section-padding flex flex-col md:grid md:grid-cols-12 gap-gutter items-start">
+<!-- Left: Description & Amenities -->
+<div class="md:col-span-8 space-y-stack-lg">
+<div class="space-y-stack-sm border-b border-outline-variant pb-stack-lg">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg">PREMIUM CHOICE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary">Deluxe King Suite</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        An sanctuary of understated elegance, our Deluxe King Suite offers 75 square meters of meticulously designed space. Featuring custom-crafted furnishings, floor-to-ceiling panoramic views, and a curated selection of artisanal amenities, this suite defines the Vohda standard of quiet luxury.
+                    </p>
+</div>
+<!-- Features Bento -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="p-stack-md bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="straighten">straighten</span>
+<span class="font-label-md text-label-md text-on-surface-variant">SPACE</span>
+<span class="font-label-lg text-label-lg">75 m² / 807 ft²</span>
+</div>
+<div class="p-stack-md bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="king_bed">king_bed</span>
+<span class="font-label-md text-label-md text-on-surface-variant">BED</span>
+<span class="font-label-lg text-label-lg">1 King Size</span>
+</div>
+<div class="p-stack-md bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="groups">groups</span>
+<span class="font-label-md text-label-md text-on-surface-variant">OCCUPANCY</span>
+<span class="font-label-lg text-label-lg">2 Adults, 1 Child</span>
+</div>
+<div class="p-stack-md bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="landscape">landscape</span>
+<span class="font-label-md text-label-md text-on-surface-variant">VIEW</span>
+<span class="font-label-lg text-label-lg">Garden or City</span>
+</div>
+</div>
+<!-- Amenities Section -->
+<div class="space-y-stack-md pt-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Exceptional Amenities</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="wifi">wifi</span>
+<div>
+<h3 class="font-label-lg text-label-lg">High-Speed Connectivity</h3>
+<p class="text-on-surface-variant text-body-md">Complimentary 1Gbps fiber-optic internet across all devices.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="local_bar">local_bar</span>
+<div>
+<h3 class="font-label-lg text-label-lg">Artisanal Mini Bar</h3>
+<p class="text-on-surface-variant text-body-md">Curated selection of local spirits and organic refreshments.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="ac_unit">ac_unit</span>
+<div>
+<h3 class="font-label-lg text-label-lg">Climate Control</h3>
+<p class="text-on-surface-variant text-body-md">Smart thermostat with personalized mood lighting presets.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="concierge">concierge</span>
+<div>
+<h3 class="font-label-lg text-label-lg">24/7 Concierge</h3>
+<p class="text-on-surface-variant text-body-md">Dedicated digital butler service for all your requests.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Sticky Booking Card -->
+<aside class="md:col-span-4 w-full md:sticky md:top-[120px]">
+<div class="bg-white border border-outline-variant p-stack-lg shadow-[0_20px_40px_rgba(0,0,0,0.04)] space-y-stack-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary">$450</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ per night</span>
+</div>
+<div class="space-y-stack-sm">
+<div class="grid grid-cols-2 border border-outline-variant">
+<div class="p-3 border-r border-outline-variant">
+<label class="block font-label-md text-label-md text-on-surface-variant">CHECK-IN</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-label-lg text-label-lg cursor-pointer" type="text" value="Oct 24, 2024"/>
+</div>
+<div class="p-3">
+<label class="block font-label-md text-label-md text-on-surface-variant">CHECK-OUT</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-label-lg text-label-lg cursor-pointer" type="text" value="Oct 28, 2024"/>
+</div>
+</div>
+<div class="p-3 border border-outline-variant border-t-0">
+<label class="block font-label-md text-label-md text-on-surface-variant">GUESTS</label>
+<select class="w-full bg-transparent border-none p-0 focus:ring-0 font-label-lg text-label-lg cursor-pointer">
+<option>2 Adults, 0 Children</option>
+<option>2 Adults, 1 Child</option>
+<option>1 Adult</option>
+</select>
+</div>
+</div>
+<div class="space-y-2 py-4 border-t border-outline-variant">
+<div class="flex justify-between text-body-md text-on-surface-variant">
+<span>$450 x 4 nights</span>
+<span>$1,800</span>
+</div>
+<div class="flex justify-between text-body-md text-on-surface-variant">
+<span>Service fee</span>
+<span>$120</span>
+</div>
+<div class="flex justify-between font-label-lg text-label-lg text-primary pt-2">
+<span>Total before taxes</span>
+<span>$1,920</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-label-lg text-label-lg hover:bg-opacity-90 transition-all duration-300">Reserve Now</button>
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified_user">verified_user</span>
+<span class="font-label-md text-label-md">Best Price Guarantee</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="cancel">cancel</span>
+<span class="font-label-md text-label-md">Free cancellation until Oct 20</span>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<!-- Social Proof Section -->
+<section class="bg-surface-container py-section-padding">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-gutter">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Guest Experiences</h2>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary">4.9 / 5.0 (124 reviews)</span>
+</div>
+</div>
+<button class="font-label-lg text-label-lg text-secondary flex items-center gap-2 border border-secondary px-6 py-2">
+                        Read All Reviews
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface p-stack-lg space-y-stack-sm border border-outline-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-full flex items-center justify-center font-label-lg text-label-lg text-primary">AM</div>
+<div>
+<div class="font-label-lg text-label-lg">Alexander M.</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Sept 2024</div>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant">"The attention to detail in the Deluxe Suite is unparalleled. From the texture of the linens to the curated evening turndown service, everything speaks of true luxury."</p>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface p-stack-lg space-y-stack-sm border border-outline-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-full flex items-center justify-center font-label-lg text-label-lg text-primary">EK</div>
+<div>
+<div class="font-label-lg text-label-lg">Elena K.</div>
+<div class="font-label-md text-label-md text-on-surface-variant">August 2024</div>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant">"A masterpiece of minimalist design. The floor-to-ceiling views are breathtaking, and the digital concierge service made our stay effortless."</p>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface p-stack-lg space-y-stack-sm border border-outline-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-full flex items-center justify-center font-label-lg text-label-lg text-primary">JW</div>
+<div>
+<div class="font-label-lg text-label-lg">Julian W.</div>
+<div class="font-label-md text-label-md text-on-surface-variant">July 2024</div>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant">"Transcendental comfort. The King bed is perhaps the most comfortable I have ever experienced. Vohda has truly mastered the art of quiet luxury."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin py-section-padding">
+<div class="space-y-stack-md">
+<div class="font-headline-md text-headline-md text-primary">Vohda Hotels</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The definitive standard in modern luxury hospitality. Curated experiences for the discerning traveler.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Explore</h4>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Our Story</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Offers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Gallery</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Support</h4>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Cookie Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Contact</h4>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Careers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Press Room</a>
+<div class="flex gap-4 mt-4 text-primary">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="public">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="mail">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="call">call</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin py-stack-md border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-md text-label-md text-on-surface-variant">© 2024 Vohda Hotels &amp; Resorts. All rights reserved.</span>
+<div class="flex gap-stack-md">
+<span class="font-label-md text-label-md text-on-surface-variant">Verified Luxury Member</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Carbon Neutral Certified</span>
+</div>
+</div>
+</footer>
+</body></html>

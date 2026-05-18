@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vohda Hotels - Explore Rooms</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e7e2d6",
+                      "error-container": "#ffdad6",
+                      "surface": "#f9f9f9",
+                      "inverse-surface": "#2f3131",
+                      "inverse-primary": "#c8c6c5",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e4e2e1",
+                      "on-background": "#1a1c1c",
+                      "on-tertiary-fixed-variant": "#49473e",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-variant": "#e2e2e2",
+                      "on-primary-fixed": "#1b1c1c",
+                      "tertiary-container": "#292720",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#fedf9a",
+                      "tertiary": "#14130c",
+                      "surface-bright": "#f9f9f9",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-fixed-dim": "#cbc6bb",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "primary-container": "#272727",
+                      "secondary-fixed-dim": "#e0c480",
+                      "on-secondary-container": "#766027",
+                      "surface-tint": "#5f5e5e",
+                      "on-secondary-fixed-variant": "#57440d",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#fbdd97",
+                      "on-surface": "#1a1c1c",
+                      "background": "#f9f9f9",
+                      "on-primary-container": "#8f8e8d",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "surface-container-low": "#f3f3f4",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "secondary": "#715c23",
+                      "primary": "#121213",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#251a00",
+                      "surface-container": "#eeeeee",
+                      "on-tertiary-fixed": "#1d1c15",
+                      "on-tertiary-container": "#918e84",
+                      "outline-variant": "#c4c7c7",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-surface-variant": "#444748",
+                      "outline": "#747878"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-padding": "120px",
+                      "card-gap": "24px",
+                      "gutter": "32px",
+                      "container-max": "1280px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "display": [
+                              "Noto Serif"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "h1": [
+                              "Noto Serif"
+                      ],
+                      "h3": [
+                              "Noto Serif"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "h2": [
+                              "Noto Serif"
+                      ]
+              },
+              "fontSize": {
+                      "display": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "h1": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h3": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h2": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          -webkit-font-smoothing: antialiased;
+        }
+        
+        .ambient-shadow {
+            box-shadow: 0 20px 50px rgba(18, 18, 19, 0.03);
+        }
+        .ambient-shadow-hover:hover {
+            box-shadow: 0 30px 60px rgba(18, 18, 19, 0.06);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="fixed w-full top-0 z-50 bg-white/10 backdrop-blur-md">
+<nav class="flex justify-between items-center px-16 h-24 max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-display text-h3 text-primary dark:text-on-primary uppercase tracking-tighter hover:opacity-80 transition-opacity" href="#">Vohda</a>
+<div class="hidden md:flex items-center gap-8 font-display text-body-lg uppercase tracking-widest">
+<a class="text-primary dark:text-secondary-fixed border-b border-primary dark:border-secondary-fixed pb-1 scale-95 duration-200 ease-in-out" href="#">Rooms</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Offers</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden lg:block font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300">Account</button>
+<button class="bg-primary text-on-primary font-button text-button px-8 py-4 rounded-DEFAULT hover:bg-tertiary transition-colors duration-300">Book Now</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-padding min-h-screen">
+<!-- Header Section -->
+<section class="max-w-container-max mx-auto px-16 pt-24 pb-16 text-center md:text-left">
+<h1 class="font-display text-display text-primary mb-6">Our Sanctuaries</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Discover a collection of thoughtfully designed spaces, where minimalist elegance meets uncompromising comfort. Each room is a quiet retreat crafted for the modern traveler seeking respite and refined luxury.
+            </p>
+</section>
+<!-- Filters -->
+<section class="max-w-container-max mx-auto px-16 pb-12">
+<div class="flex flex-col md:flex-row items-center justify-between border-b border-surface-variant pb-6 gap-6">
+<div class="flex flex-wrap items-center gap-8 w-full md:w-auto">
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-primary pb-2 border-b-2 border-transparent group-hover:border-secondary transition-colors">
+                            Room Type <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant pb-2 border-b-2 border-transparent group-hover:border-secondary transition-colors">
+                            Price Range <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant pb-2 border-b-2 border-transparent group-hover:border-secondary transition-colors">
+                            Occupancy <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant w-full md:w-auto justify-start md:justify-end">
+<span class="font-body-md text-body-md">Showing 12 of 24 Sanctuaries</span>
+</div>
+</div>
+</section>
+<!-- Room Grid -->
+<section class="max-w-container-max mx-auto px-16 pb-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Room Card 1 -->
+<article class="group bg-surface-container-lowest ambient-shadow ambient-shadow-hover transition-all duration-500 rounded-lg overflow-hidden flex flex-col">
+<div class="relative h-80 overflow-hidden bg-surface-variant">
+<div class="absolute top-4 left-4 z-10 bg-surface/90 backdrop-blur-sm px-3 py-1.5 rounded-DEFAULT font-label-caps text-label-caps text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Instant Booking
+                        </div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A luxurious, minimalist hotel room bathed in soft, natural morning light. The setting features a plush, pristine white king-sized bed dominating the center, framed by smooth, light wood paneled walls. High-key lighting emphasizes the airy, quiet luxury aesthetic. Large floor-to-ceiling windows to the right reveal a blurred, bright city skyline, contributing to the serene and premium atmosphere of this high-end boutique hotel interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRPuSBR7YelHSdAxnIpzzP63-_yqpAOeKtE8jEFLkTP3qVH4nIOZJRzfJr8dCEHqxbuoeUFce6InW_D9fx_e8_HxFAMGx17lb9hokZE58MKLc9OQg0xeZ8q2NM_CTV_iA9xM8OOuUt9z9ppes57cwHrm5pfw7CTnCVcy_ZnFn3Ftn0e_tsmfEDOLMWJSwkZrn7Ccry2WGK84c4BpI2zqz6YgDr-8aZzhKSs3wE4ZgvtnZKvoOowy5PwWqrwzuE4xEokfadal-gsdg"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-1">Deluxe King Sanctuary</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">From $450/night</p>
+</div>
+<div class="flex items-center gap-1 font-button text-button text-primary">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                            </div>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto pt-6 border-t border-surface-variant font-label-caps text-label-caps text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">king_bed</span> King Bed</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_city</span> City View</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">spa</span> Spa Access</span>
+</div>
+</div>
+</article>
+<!-- Room Card 2 -->
+<article class="group bg-surface-container-lowest ambient-shadow ambient-shadow-hover transition-all duration-500 rounded-lg overflow-hidden flex flex-col">
+<div class="relative h-80 overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An elegant, spacious hotel suite emphasizing minimal design and quiet luxury. The foreground shows a sleek, low-profile lounge area with deep charcoal seating resting on a textured cream rug. In the background, a perfectly made bed with crisp white linens sits under soft, recessed ambient lighting. The color palette revolves around warm neutrals, deep charcoals, and champagne gold accents, creating an inviting, exclusive, and calm editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEV06Xdk3TBgEYRBL6QkNN-bu28JZJpmPycJWUc8GumoUl41ZM6LdTypH-1ebTZqdjksPs0f58VScqybPQ9xmd4K6uTWUovA3JOHAjV5m6yVUNqUXFS_xK1ofWsqCwJ1q97HTI6-l4ptfAJEqdIkL8iV1Tjj9Pqm3B4ytHbjtvHZbrIvA0sPjrLcm37Dvd_dPWX62ZvkJwXBkceMUrVdXKwCeqWsDtG3Ig65l3fmQ87Md__YXFd9EumhGldhgA3nFFmLaPtVmoufM"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-1">Executive Suite</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">From $650/night</p>
+</div>
+<div class="flex items-center gap-1 font-button text-button text-primary">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                            </div>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto pt-6 border-t border-surface-variant font-label-caps text-label-caps text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">king_bed</span> King Bed</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">weekend</span> Lounge Area</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bathtub</span> Soaking Tub</span>
+</div>
+</div>
+</article>
+<!-- Room Card 3 -->
+<article class="group bg-surface-container-lowest ambient-shadow ambient-shadow-hover transition-all duration-500 rounded-lg overflow-hidden flex flex-col">
+<div class="relative h-80 overflow-hidden bg-surface-variant">
+<div class="absolute top-4 left-4 z-10 bg-surface/90 backdrop-blur-sm px-3 py-1.5 rounded-DEFAULT font-label-caps text-label-caps text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Instant Booking
+                        </div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A breathtaking penthouse suite bedroom viewed from an angle that highlights a massive corner window offering a panoramic view of a muted, overcast ocean. The room features a solitary, impeccably styled bed with deep charcoal throws over white sheets. The lighting is natural and moody, casting soft shadows across the warm, light-oak flooring. The composition relies on expansive white space and asymmetry, perfectly aligning with a high-end, discreet luxury branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtQ3_Mheg318IVzElxgBDJkD4KCoyEHUeM7Rfwyd6icpv0y7frern_vf5dnjv_mvr3uyrkfInyg3OoAhrJTdyzeaj2Dlk_l4G4Upc9uwDp6zs7doRe3O6WmDvZ4Dqo4Q4gAnbkwF7-qrtOgLkXbD9JRenF3WEVWQf6mV9vDGYGx3JuUztIKlV082bbo1_xVrY7hD6iLUPoF8qPf0oImyaUbj9O1_fkyK2xO60EpJ9Zrh90xXbAVy0m2rImNha0TxdV8aClzZk8k18"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-1">Ocean Penthouse</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">From $1,200/night</p>
+</div>
+<div class="flex items-center gap-1 font-button text-button text-primary">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span> 5.0
+                            </div>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto pt-6 border-t border-surface-variant font-label-caps text-label-caps text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">king_bed</span> King Bed</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">water</span> Ocean View</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">room_service</span> Butler Service</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-20 flex justify-center">
+<button class="font-button text-button text-primary border border-primary px-8 py-4 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-colors duration-300">
+                    Load More Sanctuaries
+                </button>
+</div>
+</section>
+<!-- Trust Signals -->
+<section class="bg-surface py-20">
+<div class="max-w-container-max mx-auto px-16 flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
+<div class="flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-[32px] text-secondary">verified</span>
+<h3 class="font-h3 text-h3 text-primary">Best Price Guaranteed</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Book directly with us to ensure you receive the most favorable rates available.</p>
+</div>
+<div class="w-px h-24 bg-surface-variant hidden md:block"></div>
+<div class="flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-[32px] text-secondary">event_available</span>
+<h3 class="font-h3 text-h3 text-primary">Free Cancellation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Enjoy peace of mind with flexible cancellation up to 48 hours before your stay.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- SideNavBar (acting as persistent bottom bar based on JSON shape) -->
+<nav class="fixed bottom-0 left-0 w-full z-40 bg-tertiary-fixed dark:bg-tertiary-container shadow-[0_-10px_50px_rgba(0,0,0,0.05)]">
+<div class="flex flex-row justify-center items-center gap-card-gap h-20 w-full">
+<button class="bg-primary text-on-primary rounded-xl px-6 py-3 font-label-caps text-label-caps hover:bg-tertiary-fixed-dim transition-all translate-y-0 hover:-translate-y-1 duration-500 flex items-center gap-2">
+<span class="material-symbols-outlined">search</span> Quick Search
+            </button>
+<button class="text-on-tertiary-fixed-variant px-6 py-3 font-label-caps text-label-caps hover:bg-tertiary-fixed-dim transition-all translate-y-0 hover:-translate-y-1 duration-500 flex items-center gap-2">
+<span class="material-symbols-outlined">calendar_today</span> Dates
+            </button>
+<button class="text-on-tertiary-fixed-variant px-6 py-3 font-label-caps text-label-caps hover:bg-tertiary-fixed-dim transition-all translate-y-0 hover:-translate-y-1 duration-500 flex items-center gap-2">
+<span class="material-symbols-outlined">person</span> Guests
+            </button>
+<button class="text-on-tertiary-fixed-variant px-6 py-3 font-label-caps text-label-caps hover:bg-tertiary-fixed-dim transition-all translate-y-0 hover:-translate-y-1 duration-500 flex items-center gap-2">
+<span class="material-symbols-outlined">check_circle</span> Availability
+            </button>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface dark:bg-inverse-surface mb-20 md:mb-0"> <!-- Added mb to clear bottom nav if needed, though bottom nav is fixed -->
+<div class="grid grid-cols-12 gap-gutter px-16 max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 flex flex-col gap-6">
+<span class="font-display text-h2 text-primary dark:text-primary-fixed">Vohda</span>
+<p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface opacity-80">
+                    © 2024 Vohda Hotels. All rights reserved.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col md:flex-row justify-end gap-12 md:gap-24 font-body-md text-body-md">
+<div class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Sitemap</a>
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

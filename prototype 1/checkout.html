@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vohda Hotels | Secure Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f3f4",
+                        "on-primary-container": "#8f8e8d",
+                        "secondary-fixed-dim": "#e0c480",
+                        "tertiary-fixed-dim": "#cbc6bb",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary-container": "#292720",
+                        "on-surface-variant": "#444748",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed": "#e7e2d6",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "outline": "#747878",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#918e84",
+                        "on-tertiary-fixed": "#1d1c15",
+                        "primary-container": "#272727",
+                        "on-secondary-fixed-variant": "#57440d",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary-container": "#766027",
+                        "surface-container-highest": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fbdd97",
+                        "on-tertiary-fixed-variant": "#49473e",
+                        "surface-container": "#eeeeee",
+                        "primary": "#121213",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e4e2e1",
+                        "on-error": "#ffffff",
+                        "secondary": "#715c23",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary": "#14130c",
+                        "on-secondary-fixed": "#251a00",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed": "#fedf9a",
+                        "inverse-primary": "#c8c6c5",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "margin": "48px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "label-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin py-stack-md">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-primary">Vohda Hotels</div>
+<nav class="hidden md:flex gap-stack-lg">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Offers</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300">Sign In</button>
+<button class="bg-secondary text-on-secondary px-stack-lg py-stack-sm rounded-lg font-label-lg text-label-lg transition-all duration-300 hover:brightness-110">Book Now</button>
+</div>
+</div>
+</header>
+<main class="pt-[120px] pb-section-padding max-w-container-max mx-auto px-margin">
+<!-- Progress Indicator -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-center mb-stack-sm max-w-2xl mx-auto">
+<div class="flex flex-col items-center">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md">1</span>
+<span class="font-label-md text-label-md mt-2 text-primary">Selection</span>
+</div>
+<div class="flex-grow h-[1px] bg-outline-variant mx-4 -mt-6"></div>
+<div class="flex flex-col items-center">
+<span class="w-8 h-8 rounded-full border border-secondary bg-surface text-secondary flex items-center justify-center font-label-md">2</span>
+<span class="font-label-md text-label-md mt-2 text-secondary">Guest Info</span>
+</div>
+<div class="flex-grow h-[1px] bg-outline-variant mx-4 -mt-6"></div>
+<div class="flex flex-col items-center">
+<span class="w-8 h-8 rounded-full border border-outline-variant bg-surface text-on-surface-variant flex items-center justify-center font-label-md">3</span>
+<span class="font-label-md text-label-md mt-2 text-on-surface-variant opacity-60">Confirmation</span>
+</div>
+</div>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-stack-lg text-center">Complete Your Reservation</h1>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Forms -->
+<div class="lg:col-span-7 flex flex-col gap-stack-lg">
+<!-- Guest Info Section -->
+<section class="p-stack-lg bg-surface-container-lowest luxury-shadow border border-surface-variant">
+<h2 class="font-headline-md text-headline-md mb-stack-md flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary">person</span>
+                        Guest Details
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">First Name</label>
+<input class="border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="Julian" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Last Name</label>
+<input class="border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="Sterling" type="text"/>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Email Address</label>
+<input class="border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="julian.sterling@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Special Requests (Optional)</label>
+<textarea class="border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md resize-none" placeholder="Allergies, floor preference, etc." rows="2"></textarea>
+</div>
+</div>
+</section>
+<!-- Payment Details Section -->
+<section class="p-stack-lg bg-surface-container-lowest luxury-shadow border border-surface-variant">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary">payments</span>
+                            Secure Payment
+                        </h2>
+<div class="flex gap-2 opacity-60">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-stack-md mb-stack-md flex items-center gap-stack-md border-l-4 border-secondary">
+<span class="material-symbols-outlined text-secondary">lock</span>
+<p class="font-body-md text-on-surface-variant text-[14px]">Your information is encrypted with 256-bit SSL security.</p>
+</div>
+<div class="flex flex-col gap-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Card Number</label>
+<div class="relative">
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="absolute right-0 top-2 material-symbols-outlined text-on-surface-variant opacity-40">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Expiry Date</label>
+<input class="border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="MM / YY" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">CVV</label>
+<input class="border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Promo Code -->
+<section class="p-stack-lg bg-surface-container-lowest luxury-shadow border border-surface-variant">
+<label class="font-label-lg text-label-lg mb-stack-sm block">Promo Code</label>
+<div class="flex gap-stack-md">
+<input class="flex-grow border-0 border-b border-outline-variant bg-transparent py-2 px-0 focus:ring-0 focus:border-secondary font-body-md" placeholder="Enter code" type="text"/>
+<button class="font-label-lg text-label-lg text-secondary border border-secondary px-stack-lg py-stack-sm hover:bg-secondary hover:text-on-secondary transition-all">Apply</button>
+</div>
+</section>
+<button class="w-full bg-primary text-on-primary py-stack-lg font-label-lg text-label-lg tracking-widest uppercase transition-all hover:brightness-125 luxury-shadow">
+                    Confirm Reservation
+                </button>
+</div>
+<!-- Right Column: Booking Summary -->
+<aside class="lg:col-span-5 sticky top-32">
+<div class="bg-surface-container-low border border-surface-variant luxury-shadow overflow-hidden">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A high-end luxury hotel suite bedroom featuring a king-size bed with crisp white linens, dark wood furniture, and a panoramic window overlooking a twilight city skyline. The room is bathed in warm, soft ambient lighting that highlights the sophisticated charcoal and champagne gold accents. The atmosphere is one of serene, quiet luxury, with minimal clutter and an emphasis on architectural lines and premium textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSsOafoUcE42tsOmVRNzYXp7RZVfz3sszeVJoOa-Xgp_YxJyOMespTRoU1ojQk0obAimuxpPe07bNvTywxwU97i1ZX7Zor7iV26PzCFpvIVDbq9dFmCkWAlxyUnZ5exrb1g6FwijlUtW5t-uQa5sJeUFKxUKHzJ7yZeXlNoVvKcBUrHqmGnHIKxnWCgJc9LHuAfuOb2iTrRPa9rQNHW9Zv9DJjP2SAf3A0QaNZdVoNBG_lm6sXRIT16HOJ3gyHyGq4iI_JXU2kFkb_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-stack-md left-stack-md text-white">
+<h3 class="font-headline-md text-headline-md">Royal Heritage Suite</h3>
+<p class="font-body-md opacity-90 text-[14px]">Vohda Grand Plaza</p>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col gap-stack-lg">
+<!-- Dates & Guests -->
+<div class="grid grid-cols-2 gap-stack-md border-b border-outline-variant pb-stack-md">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Check In</span>
+<p class="font-body-md font-semibold">Oct 24, 2024</p>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Check Out</span>
+<p class="font-body-md font-semibold">Oct 29, 2024</p>
+</div>
+</div>
+<!-- Pricing Breakdown -->
+<div class="flex flex-col gap-stack-sm">
+<div class="flex justify-between font-label-lg text-label-lg items-center">
+<span class="text-on-surface-variant">Pricing Currency</span>
+<select class="bg-transparent border-0 border-b border-outline-variant py-0 pr-8 text-secondary font-semibold focus:ring-0">
+<option>USD ($)</option>
+<option>EUR (€)</option>
+<option>GBP (£)</option>
+</select>
+</div>
+<div class="flex justify-between items-center mt-stack-sm">
+<span class="font-body-md text-on-surface-variant">5 Nights ( $450 / night )</span>
+<span class="font-body-md">$2,250.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Resort Fee &amp; Taxes</span>
+<span class="font-body-md">$185.40</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-secondary">Seasonal Offer (-15%)</span>
+<span class="font-body-md text-secondary">-$337.50</span>
+</div>
+<div class="mt-stack-md pt-stack-md border-t border-primary flex justify-between items-center">
+<span class="font-headline-md text-headline-md">Total</span>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary">$2,097.90</span>
+<p class="font-label-md text-label-md text-on-surface-variant">Inclusive of all taxes</p>
+</div>
+</div>
+</div>
+<!-- Trust Badge -->
+<div class="mt-stack-md bg-surface p-stack-md flex items-start gap-stack-md">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<div>
+<p class="font-label-lg text-label-lg mb-1">Best Price Guarantee</p>
+<p class="font-body-md text-on-surface-variant text-[13px]">If you find a lower price elsewhere, we will match it and give you an additional 10% off.</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin py-section-padding">
+<div class="flex flex-col gap-stack-md">
+<div class="font-headline-md text-headline-md text-primary">Vohda Hotels</div>
+<p class="font-body-md text-on-surface-variant">Elegance in every detail, comfort in every stay. Experience quiet luxury across our global collection of resorts.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-primary uppercase mb-2">Destinations</span>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Swiss Alps</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Maldives</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Kyoto Retreat</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Venice Canal</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-primary uppercase mb-2">Support</span>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Careers</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Sustainability</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Press Room</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Cookie Policy</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-primary uppercase mb-2">Social</span>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer">photo_camera</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer">podcasts</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin py-stack-md border-t border-outline-variant/30 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant opacity-80">© 2024 Vohda Hotels &amp; Resorts. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

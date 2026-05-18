@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Account - Vohda Hotels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e7e2d6",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9f9",
+                    "inverse-surface": "#2f3131",
+                    "inverse-primary": "#c8c6c5",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#e4e2e1",
+                    "on-background": "#1a1c1c",
+                    "on-tertiary-fixed-variant": "#49473e",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-fixed": "#1b1c1c",
+                    "tertiary-container": "#292720",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#fedf9a",
+                    "tertiary": "#14130c",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-high": "#e8e8e8",
+                    "tertiary-fixed-dim": "#cbc6bb",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#272727",
+                    "secondary-fixed-dim": "#e0c480",
+                    "on-secondary-container": "#766027",
+                    "surface-tint": "#5f5e5e",
+                    "on-secondary-fixed-variant": "#57440d",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#fbdd97",
+                    "on-surface": "#1a1c1c",
+                    "background": "#f9f9f9",
+                    "on-primary-container": "#8f8e8d",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "surface-container-low": "#f3f3f4",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "secondary": "#715c23",
+                    "primary": "#121213",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#251a00",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed": "#1d1c15",
+                    "on-tertiary-container": "#918e84",
+                    "outline-variant": "#c4c7c7",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-surface-variant": "#444748",
+                    "outline": "#747878"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding": "120px",
+                    "card-gap": "24px",
+                    "gutter": "32px",
+                    "container-max": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display": ["Noto Serif"],
+                    "button": ["Inter"],
+                    "h1": ["Noto Serif"],
+                    "h3": ["Noto Serif"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed w-full top-0 z-50 bg-white/10 backdrop-blur-md">
+<div class="flex justify-between items-center px-16 h-24 max-w-container-max mx-auto">
+<div class="font-display text-h3 text-primary dark:text-on-primary uppercase tracking-tighter">Vohda</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-display text-body-lg uppercase tracking-widest hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Rooms</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-display text-body-lg uppercase tracking-widest hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Offers</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-display text-body-lg uppercase tracking-widest hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-display text-body-lg uppercase tracking-widest hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block text-on-surface-variant font-button text-button hover:text-primary transition-colors" href="#">Book Now</a>
+<a class="text-primary dark:text-secondary-fixed border-b border-primary dark:border-secondary-fixed pb-1 font-display text-body-lg uppercase tracking-widest hover:text-primary dark:hover:text-secondary-fixed transition-colors duration-300 scale-95 duration-200 ease-in-out" href="#">Account</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding px-6 md:px-16 max-w-container-max mx-auto min-h-screen">
+<!-- Header -->
+<header class="mb-16 pt-12">
+<h1 class="font-h1 text-h1 text-primary mb-4">Welcome back, Alexander</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Manage your reservations, preferences, and details.</p>
+</header>
+<!-- Main Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Sidebar Navigation (Desktop) / Horizontal Scroll (Mobile) -->
+<aside class="lg:col-span-3">
+<nav class="flex overflow-x-auto lg:flex-col gap-4 pb-4 lg:pb-0 hide-scrollbar sticky top-32">
+<a class="flex-shrink-0 lg:flex-shrink flex items-center gap-3 py-3 px-4 border-l-2 border-primary text-primary font-button text-button bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                        Upcoming Stays
+                    </a>
+<a class="flex-shrink-0 lg:flex-shrink flex items-center gap-3 py-3 px-4 border-l-2 border-transparent text-on-surface-variant hover:bg-surface-container-lowest hover:text-primary font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                        Booking History
+                    </a>
+<a class="flex-shrink-0 lg:flex-shrink flex items-center gap-3 py-3 px-4 border-l-2 border-transparent text-on-surface-variant hover:bg-surface-container-lowest hover:text-primary font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                        Profile Settings
+                    </a>
+<a class="flex-shrink-0 lg:flex-shrink flex items-center gap-3 py-3 px-4 border-l-2 border-transparent text-on-surface-variant hover:bg-surface-container-lowest hover:text-primary font-button text-button transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+                        Saved Payments
+                    </a>
+</nav>
+</aside>
+<!-- Content Canvas -->
+<div class="lg:col-span-9 space-y-16">
+<!-- Upcoming Stays Section -->
+<section>
+<h2 class="font-h2 text-h2 text-primary mb-8 border-b border-surface-variant pb-4">Upcoming Stays</h2>
+<!-- Bento Grid Card for Upcoming Stay -->
+<div class="bg-surface-container-lowest shadow-[0_30px_50px_rgba(18,18,19,0.03)] p-6 lg:p-8 hover:-translate-y-1 transition-transform duration-500 rounded-DEFAULT relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-1/3 h-full hidden md:block">
+<img alt="Luxury Hotel Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A pristine, luxury hotel suite featuring expansive floor-to-ceiling windows overlooking a serene coastal landscape. The room is styled with quiet luxury minimalism, bathed in soft, natural daylight. A plush, perfectly made king-sized bed sits prominently, accented with high-quality linens in soft cream and deep charcoal tones. The overall aesthetic is calming, exclusive, and editorial, perfectly matching a high-end boutique hospitality experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaunM4750EyUXpui8hXRTOMVTAo0GwnHw1K52vlfkeD-6R84Qok9Qwb86_mfkjMXhslNg2fmUpHwqivvjVTLczGADz9o2oBIZQI7ghwyLxJF0vKe9JIPABInsTVYmqPDDrWffq36vhXAW6S4THzH9MpjCyLiOYnMxXJJF_VGXS-2sZHK5kNwe0rzczCgeBWK8EZZ1QLYpBp7dbylaN-J_HaT3hqDRGMPTftGrrjtHH1hB2ffIQLT73Ob5vjlGiy0DWAMCRh-wemy8"/>
+</div>
+<div class="relative z-10 md:w-2/3 pr-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 font-label-caps text-label-caps tracking-widest uppercase">Confirmed</span>
+<span class="text-on-surface-variant font-body-md text-sm">Res #VHD-89241</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-2">The Oceanfront Penthouse</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Vohda Maldives Resort &amp; Spa</p>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Check-in</p>
+<p class="font-body-lg text-body-lg text-primary">Oct 12, 2024</p>
+<p class="text-sm text-on-surface-variant">3:00 PM</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Check-out</p>
+<p class="font-body-lg text-body-lg text-primary">Oct 18, 2024</p>
+<p class="text-sm text-on-surface-variant">11:00 AM</p>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-button text-button px-6 py-3 hover:bg-tertiary transition-colors">Manage Booking</button>
+<button class="border border-primary text-primary font-button text-button px-6 py-3 hover:bg-surface-container-low transition-colors">View Itinerary</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking History Section -->
+<section>
+<h2 class="font-h2 text-h2 text-primary mb-8 border-b border-surface-variant pb-4">Booking History</h2>
+<div class="space-y-4">
+<!-- History Item 1 -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 bg-surface-container-lowest shadow-[0_20px_40px_rgba(18,18,19,0.02)] hover:shadow-[0_30px_50px_rgba(18,18,19,0.04)] transition-all duration-300">
+<div>
+<h4 class="font-h3 text-xl text-primary mb-1">Urban Retreat Suite</h4>
+<p class="font-body-md text-on-surface-variant text-sm mb-2">Vohda Tokyo</p>
+<p class="font-body-md text-on-surface-variant">May 10 - May 14, 2024</p>
+</div>
+<div class="mt-4 md:mt-0">
+<button class="border border-outline text-primary font-button text-button px-5 py-2 hover:border-secondary hover:text-secondary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="replay">replay</span>
+                                    Book Again
+                                </button>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 bg-surface-container-lowest shadow-[0_20px_40px_rgba(18,18,19,0.02)] hover:shadow-[0_30px_50px_rgba(18,18,19,0.04)] transition-all duration-300">
+<div>
+<h4 class="font-h3 text-xl text-primary mb-1">Desert Oasis Villa</h4>
+<p class="font-body-md text-on-surface-variant text-sm mb-2">Vohda Sedona</p>
+<p class="font-body-md text-on-surface-variant">Jan 05 - Jan 08, 2024</p>
+</div>
+<div class="mt-4 md:mt-0">
+<button class="border border-outline text-primary font-button text-button px-5 py-2 hover:border-secondary hover:text-secondary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="replay">replay</span>
+                                    Book Again
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Profile & Preferences Teaser -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-card-gap">
+<!-- Profile Card -->
+<div class="bg-surface-container-low p-8 shadow-[0_20px_40px_rgba(18,18,19,0.02)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-h3 text-h3 text-primary">Profile Details</h3>
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="edit">edit</span></a>
+</div>
+<div class="space-y-4">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Full Name</p>
+<p class="font-body-lg text-primary">Alexander Sterling</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Email Address</p>
+<p class="font-body-lg text-primary">a.sterling@example.com</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Phone Number</p>
+<p class="font-body-lg text-primary">+1 (555) 019-2834</p>
+</div>
+</div>
+</div>
+<!-- Payment Card -->
+<div class="bg-surface-container-low p-8 shadow-[0_20px_40px_rgba(18,18,19,0.02)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-h3 text-h3 text-primary">Saved Payments</h3>
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="add">add</span></a>
+</div>
+<div class="border border-outline-variant p-4 flex items-center justify-between mb-4 bg-surface-container-lowest">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="credit_card">credit_card</span>
+<div>
+<p class="font-body-md text-primary font-medium">Amex ending in 4002</p>
+<p class="font-body-md text-on-surface-variant text-sm">Expires 12/26</p>
+</div>
+</div>
+<span class="bg-surface-variant text-on-surface-variant px-2 py-1 font-label-caps text-[10px] uppercase">Primary</span>
+</div>
+<div class="border border-outline-variant p-4 flex items-center justify-between opacity-70 hover:opacity-100 transition-opacity bg-surface-container-lowest">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="credit_card">credit_card</span>
+<div>
+<p class="font-body-md text-primary font-medium">Visa ending in 1899</p>
+<p class="font-body-md text-on-surface-variant text-sm">Expires 08/25</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface dark:bg-inverse-surface">
+<div class="grid grid-cols-12 gap-gutter px-16 max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<div class="font-display text-h2 text-primary dark:text-primary-fixed mb-4">Vohda</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Vohda Hotels. All rights reserved.</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-8 justify-start md:justify-end">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Sustainability</a>
+</div>
+</div>
+</footer>
+</body></html>
